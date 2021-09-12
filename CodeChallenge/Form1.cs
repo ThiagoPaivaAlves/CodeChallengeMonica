@@ -13,9 +13,12 @@ namespace CodeChallenge
 {
     public partial class Form1 : Form
     {
+
+        private BindingList<Station> stationsList = new BindingList<Station>();
         public Form1()
         {
             InitializeComponent();
+            myGridView.DataSource = stationsList;
         }
 
         private void loadButton_Click(object sender, EventArgs e)
@@ -26,12 +29,9 @@ namespace CodeChallenge
        
         private void changeChar_Click(object sender, EventArgs e)
         {
-            int rows = myGridView.Rows.Count;
-            int col = myGridView.Columns.Count;
-
-            for (int i = 0; i < rows; i++) //lines
+            for (int i = 0; i < myGridView.Rows.Count; i++) //lines
             {
-                for (int j = 0; j < col; j++) //columns
+                for (int j = 0; j < myGridView.Columns.Count; j++) //columns
                 {
                     string temp = myGridView[j,i].Value?.ToString();
                     if(temp != null)
@@ -40,12 +40,6 @@ namespace CodeChallenge
             }
 
         }
-
-        private void myCombo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
 
         private void comboShow_Click(object sender, EventArgs e)
         {
@@ -78,59 +72,57 @@ namespace CodeChallenge
 
         private void PopulateComboDataFile(string path) 
         {
-            string[] lines = System.IO.File.ReadAllLines(path);
-            foreach (string line in lines) 
+            if (path == string.Empty)
+                MessageBox.Show("Error, No file chosen");
+            else
             {
-                string[] content = line.Split(',');
-
-                Console.WriteLine(content.Length);
-                if (content.Length >= 2)
+                string[] lines = System.IO.File.ReadAllLines(path);
+                foreach (string line in lines)
                 {
-                    int index;
-                    int.TryParse(content[0], out index);
-                    myCombo.Items.Insert(index, content[1]);
+                    string[] content = line.Split(',');
+
+                    Console.WriteLine(content.Length);
+                    if (content.Length >= 2)
+                    {
+                        int index;
+                        int.TryParse(content[0], out index);
+                        myCombo.Items.Insert(index, content[1]);
+                    }
+
                 }
-                
             }
         }
         private void PopulateGridDataFile(string path)
         {
-            DataTable dt = new DataTable();
-            string[] lines = System.IO.File.ReadAllLines(path);
-            if (lines.Length > 0)
-            {
-                //creating headers
-                string headers = lines[0];
-                string[] labels = headers.Split(',');
-
-                foreach (string word in labels)
+            if (path == string.Empty)
+                MessageBox.Show("Error, No file chosen");
+            else 
+            { 
+                string[] lines = System.IO.File.ReadAllLines(path);
+                if (lines.Length > 0)
                 {
-                    dt.Columns.Add(new DataColumn(word));
-                }
-                //getting the data
-
-                for (int i = 1; i < lines.Length; i++)
-                {
-                    string[] lineContent = lines[i].Split(',');
-                    DataRow row = dt.NewRow(); //adding rows
-                    int index = 0;
-                    foreach (string content in labels)
+                    for (int i = 1; i < lines.Length; i++)
                     {
-                        row[content] = lineContent[index++];
+                        string[] lineContent = lines[i].Split(',');
+                        try
+                        {
+                            int id;
+                            Int32.TryParse(lineContent[1], out id);
+                            decimal depth;
+                            Decimal.TryParse(lineContent[3], out depth);
+                            Station content = new Station(lineContent[0], id, lineContent[2], depth, lineContent[4]);
+                            stationsList.Add(content);
+                            content = null;
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                    
                     }
-                    dt.Rows.Add(row);
-                }
 
-                if (dt.Rows.Count > 0)
-                {
-                    myGridView.DataSource = dt;
                 }
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

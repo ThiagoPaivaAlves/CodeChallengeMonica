@@ -48,8 +48,8 @@ namespace CodeChallenge
             // 
             // myGridView
             // 
-            resources.ApplyResources(this.myGridView, "myGridView");
             this.myGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.myGridView, "myGridView");
             this.myGridView.Name = "myGridView";
             this.myGridView.RowTemplate.Height = 24;
             // 
@@ -62,10 +62,9 @@ namespace CodeChallenge
             // 
             // myCombo
             // 
-            resources.ApplyResources(this.myCombo, "myCombo");
             this.myCombo.FormattingEnabled = true;
+            resources.ApplyResources(this.myCombo, "myCombo");
             this.myCombo.Name = "myCombo";
-            this.myCombo.SelectedIndexChanged += new System.EventHandler(this.myCombo_SelectedIndexChanged);
             // 
             // populateCombo
             // 
@@ -92,7 +91,6 @@ namespace CodeChallenge
             this.Controls.Add(this.myGridView);
             this.Controls.Add(this.loadButton);
             this.Name = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.myGridView)).EndInit();
             this.ResumeLayout(false);
 
