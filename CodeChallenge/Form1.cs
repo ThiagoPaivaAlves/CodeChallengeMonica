@@ -25,7 +25,6 @@ namespace CodeChallenge
         {
             PopulateGridDataFile(getUserFilePath());
         }
-
        
         private void changeChar_Click(object sender, EventArgs e)
         {
@@ -118,11 +117,28 @@ namespace CodeChallenge
                         {
                             Console.WriteLine(e.Message);
                         }
-                    
                     }
-
                 }
             }
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            int id;
+            Int32.TryParse(idInput.Text, out id);
+            decimal depth;
+            Decimal.TryParse(depthInput.Text, out depth);
+            stationsList.Add(new Station(nameInput.Text.ToString(), id, dateInput.Text.ToString(), depth, commentsInput.Text.ToString()));
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            if (this.myGridView.SelectedRows.Count > 0)
+            {
+                myGridView.Rows.RemoveAt(this.myGridView.SelectedRows[0].Index);
+            }
+            else
+                MessageBox.Show("Select the entire line to delete");
         }
     }
 }
