@@ -20,20 +20,7 @@ namespace CodeChallenge
 
         private void loadButton_Click(object sender, EventArgs e)
         {
-            var filePath = string.Empty;
-
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.Filter = "CSV files (*.csv)|*.csv";
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    //Get the path of specified file
-                    filePath = openFileDialog.FileName;
-                    PopulateGridDataFile(filePath);
-                }
-            }
+            PopulateGridDataFile(getUserFilePath());
         }
 
        
@@ -67,7 +54,12 @@ namespace CodeChallenge
 
         private void populateCombo_Click(object sender, EventArgs e)
         {
-            var filePath = string.Empty;
+            PopulateComboDataFile(getUserFilePath());
+        }
+
+        private string getUserFilePath() 
+        {
+            string filePath = string.Empty;
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -78,9 +70,10 @@ namespace CodeChallenge
                 {
                     //Get the path of specified file
                     filePath = openFileDialog.FileName;
-                    PopulateComboDataFile(filePath);
+                    return filePath;
                 }
             }
+            return "";
         }
 
         private void PopulateComboDataFile(string path) 

@@ -120,6 +120,13 @@
   <data name="&gt;&gt;populateCombo.Name" xml:space="preserve">
     <value>populateCombo</value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="populateCombo.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
   <data name="&gt;&gt;myCombo.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -136,7 +143,6 @@
   <data name="&gt;&gt;comboShow.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="loadButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -149,11 +155,11 @@
   <data name="populateCombo.Text" xml:space="preserve">
     <value>Populate combo</value>
   </data>
-  <data name="&gt;&gt;changeChar.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 450</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Form1</value>
+  <data name="&gt;&gt;populateCombo.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="comboShow.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -161,17 +167,20 @@
   <data name="populateCombo.Location" type="System.Drawing.Point, System.Drawing">
     <value>342, 11</value>
   </data>
-  <data name="myGridView.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
   <data name="loadButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
   </data>
-  <data name="&gt;&gt;comboShow.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;populateCombo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;loadButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboShow.Name" xml:space="preserve">
+    <value>comboShow</value>
   </data>
   <data name="changeChar.Location" type="System.Drawing.Point, System.Drawing">
     <value>103, 12</value>
@@ -182,9 +191,6 @@
   <data name="myCombo.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="loadButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
   <data name="&gt;&gt;loadButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -194,17 +200,17 @@
   <data name="&gt;&gt;changeChar.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;loadButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="populateCombo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 23</value>
   </data>
-  <data name="populateCombo.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="changeChar.Text" xml:space="preserve">
+    <value>a -&gt; @</value>
   </data>
   <data name="&gt;&gt;changeChar.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;populateCombo.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="changeChar.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;loadButton.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -224,8 +230,8 @@
   <data name="&gt;&gt;loadButton.Name" xml:space="preserve">
     <value>loadButton</value>
   </data>
-  <data name="&gt;&gt;comboShow.Name" xml:space="preserve">
-    <value>comboShow</value>
+  <data name="&gt;&gt;populateCombo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="myCombo.Location" type="System.Drawing.Point, System.Drawing">
     <value>203, 11</value>
@@ -236,23 +242,20 @@
   <data name="&gt;&gt;myGridView.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="changeChar.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="comboShow.Text" xml:space="preserve">
     <value>Show</value>
   </data>
-  <data name="populateCombo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 23</value>
+  <data name="loadButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
   </data>
   <data name="myGridView.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="changeChar.Text" xml:space="preserve">
-    <value>a -&gt; @</value>
+  <data name="&gt;&gt;changeChar.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;populateCombo.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;comboShow.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="loadButton.Text" xml:space="preserve">
     <value>Load</value>
@@ -266,11 +269,8 @@
   <data name="comboShow.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Form1</value>
-  </data>
-  <data name="&gt;&gt;populateCombo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="myGridView.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
   </data>
   <data name="changeChar.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
